@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/Car/car';
 import { CarService } from 'src/app/services/car.service';
 
@@ -15,7 +16,7 @@ export class CarComponent implements OnInit {
 
   
 
-  constructor(private carService:CarService) {   }
+  constructor(private carService:CarService,private activatedRoute:ActivatedRoute) {   }
 
   ngOnInit(): void {
     this.getCars();
